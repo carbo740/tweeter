@@ -1,4 +1,5 @@
 nav {
+  display: flex;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
@@ -6,30 +7,27 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: fixed;
-}
-
-.write-tweet {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.fa-solid.fa-angles-down {
-  display: flex;
-  justify-content: center;
+  top: 0;
+  justify-content: space-between;
 }
 
 .logo {
   display: flex;
+  text-align: end;
   font-size: 3rem;
   font-family: 'Bungee', sans-serif;
-  justify-content: column;
+  flex-direction: column;
+  justify-content: center;
 }
 
-span.write-new-tweet {
+div.nav-new-tweet {
+  display: flex;
   font-size: 1rem;
   font-family: 'Bungee', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
