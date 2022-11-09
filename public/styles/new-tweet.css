@@ -1,13 +1,11 @@
 .new-tweet {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  justify-content: center;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  justify-content: space-evenly;
 }
 
-.button {
-  color: grey;
-  background-color: lightblue;
+.below-tweet {
+  display: flex;
+  justify-content: space-between;
 }
+

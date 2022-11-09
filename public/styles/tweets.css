@@ -1,0 +1,64 @@
+.tweets-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: black;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 100%;
+  margin-top: 20px;
+}
+
+article > header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.tweet:hover {
+  box-shadow: 0px 5px 10px 0px blue;
+}
+
+#flagIcon:hover {
+  color: lightblue;
+}
+
+#retweetIcon:hover {
+  color: lightblue;
+}
+
+#heartIcon:hover {
+  color: lightblue;
+}
+
+article > p {
+  display: flex;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+article > footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 3px solid black;
+}
+
+.bottomIcons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-content: space-between;
+  padding-top: 40px;
+  color: black;
+}
+

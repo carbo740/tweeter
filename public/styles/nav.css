@@ -8,11 +8,16 @@ nav {
   position: fixed;
 }
 
-div.write-tweet {
+.write-tweet {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.fa-solid.fa-angles-down {
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
