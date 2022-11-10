@@ -59,5 +59,11 @@ $(document).ready(function() {
   $(".new-tweet-form").submit(function (event) {
     event.preventDefault();
     let serializedData = $(this).serialize();
+
+    if ($("#tweet-text").val() === "" || null) {
+      alert("You cannot submit an empty field!");
+    } else if ($("#tweet-text").val().length > 140) {
+      alert("Exceeded Limit of 140 Characters!");
+    }
   })
 });
