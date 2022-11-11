@@ -2,6 +2,7 @@ form {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-top: 150px;
 }
 
 #tweet-text {
@@ -32,3 +33,19 @@ div.below-tweet {
   padding-top: 20px;
 }
 
+.error {
+  display: flex;
+  width: max-content;
+  border-style: groove;
+  border-color: black;
+  background-color: pink;
+  color: red;
+  font-weight: 1000;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  form {
+    margin-top: 0px;
+  }
+}

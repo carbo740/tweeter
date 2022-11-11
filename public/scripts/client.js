@@ -4,9 +4,9 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 const escape = (str) => {
- let div = document.createElement("div");
- div.appendChild(document.createTextNode(str));
- return div.innerHTML;
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 const createTweetElement = (data) => {
@@ -14,7 +14,7 @@ const createTweetElement = (data) => {
   <article class="tweet">
     <header>
       <div class="userProfile">
-        <img src="${data.user.avatars}"></img>
+        <img id="userAvatarPic" src="${data.user.avatars}"></img>
         <h3>${data.user.name}</h3>
       </div>
       <h4>${data.user.handle}</h4>
@@ -52,7 +52,7 @@ const loadTweets = () => {
     },
     error: (error) => {
       console.log(error);
-    } 
+    }
   });
 };
 
@@ -65,15 +65,27 @@ $(document).ready(function() {
   // SUBMIT HANDLER //
 
   let $newTweetForm =  $(".new-tweet-form");
-  $newTweetForm.submit(function (event) {
+  $newTweetForm.submit(function(event) {
 
     event.preventDefault();
     let serializedData = $(this).serialize();
 
     if ($("#tweet-text").val() === "" || null) {
-      alert("You cannot submit an empty field!");
+      $(".new-tweet-form").prepend(
+        $("<div class='error'>")
+          .text("❌ Error. Cannot submit an empty field. ❌")
+          .slideDown()
+          .delay(4000)
+          .hide(500)
+      );
     } else if ($("#tweet-text").val().length > 140) {
-      alert("Exceeded Limit of 140 Characters!");
+      $(".new-tweet-form").prepend(
+        $("<div class='error'>")
+          .text("❌ Error. Exceeded character limit of 140. ❌")
+          .slideDown()
+          .delay(4000)
+          .hide(500)
+      );
     } else {
       $.post("/tweets/", serializedData).then((response) => {
         loadTweets();

@@ -30,4 +30,12 @@ div.nav-new-tweet {
 
 }
 
+@media (max-width: 768px) {
+  nav {
+    background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+    background-color: #8a0027;
+  }
+}
+
+
 

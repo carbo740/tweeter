@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
 }
 
 main {
@@ -39,6 +40,8 @@ main {
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
 
-/* body.nav {
-  font-family: 'Bungee', cursive;
-} */
+@media (max-width: 768px) {
+  body {
+    display: inline;
+  }
+}
