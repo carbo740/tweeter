@@ -26,3 +26,7 @@ Main Page Display on Mobile
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- md5
+- timeago.js 
