@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#tweet-text").on("keyup", function (a) {
+  $("#tweet-text").on("keyup", function(a) {
     let charCounter = $(this).val().length;
     let counterElement = $(this).parent().children(".below-tweet").children(".counter");
     let charsLeft = 140 - charCounter;
